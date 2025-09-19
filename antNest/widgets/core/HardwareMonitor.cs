@@ -4,13 +4,10 @@ using System.Linq;
 
 namespace antNest.widgets.core
 {
-    // Implementujemy IDisposable, żeby prawidłowo zwalniać zasoby
     public class HardwareMonitor : IDisposable
     {
         private readonly Computer _computer;
 
-        // Pola do przechowywania referencji do komponentów. 
-        // Znajdujemy je raz i nie szukamy ponownie.
         private readonly IHardware? _cpu;
         private readonly IHardware? _gpu;
         private readonly IHardware? _ram;

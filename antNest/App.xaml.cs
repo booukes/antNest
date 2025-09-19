@@ -16,7 +16,7 @@ namespace antNest
 
             Log.Information("Application starting...");
 
-            // Catch unhandled exceptions
+            // Catch UI Thread exceptions
             AppDomain.CurrentDomain.UnhandledException += (sender, args) =>
             {
                 Log.Fatal(args.ExceptionObject as Exception, "Unhandled exception");

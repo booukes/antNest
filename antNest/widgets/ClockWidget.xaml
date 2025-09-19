@@ -7,7 +7,6 @@
              d:DesignHeight="200" d:DesignWidth="300"
              Style="{StaticResource WidgetHostStyle}">
     <Grid VerticalAlignment="Center" HorizontalAlignment="Center">
-        <!-- Low alpha "watermark" text behind -->
         <TextBlock x:Name="TimeZoneTextBlock"
                FontSize="72"
                FontWeight="Bold"
@@ -17,7 +16,6 @@
                VerticalAlignment="Center"
                IsHitTestVisible="False"/>
 
-        <!-- Main vertical stack -->
         <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
             <TextBlock x:Name="TimeTextBlock" Text="22:10:55" FontSize="48" FontWeight="Light" TextAlignment="Center"/>
             <TextBlock x:Name="DateTextBlock" Text="Friday, 19 September" FontSize="18" Foreground="Gray" TextAlignment="Center"/>

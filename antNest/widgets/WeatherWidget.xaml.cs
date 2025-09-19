@@ -10,7 +10,7 @@ namespace antNest.widgets
         public WeatherWidget()
         {
             InitializeComponent();
-            // In a real app, you'd start a timer or service to fetch real data.
+            // todo: fetch api data
             // For v1, we just display placeholder data set via Configure method.
         }
 
