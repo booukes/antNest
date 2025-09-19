@@ -1,0 +1,68 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <SolidColorBrush x:Key="WindowBackgroundColor" Color="#1E1E1E"/>
+    <SolidColorBrush x:Key="WidgetBackgroundColor" Color="#2D2D30"/>
+    <SolidColorBrush x:Key="BorderColor" Color="#434346"/>
+    <SolidColorBrush x:Key="ForegroundColor" Color="#F1F1F1"/>
+    <SolidColorBrush x:Key="AccentColor" Color="#007ACC"/>
+    <SolidColorBrush x:Key="ProgressBarBackgroundColor" Color="#434346"/>
+
+
+    <!-- Base Style for the Main Window -->
+    <Style x:Key="ModernWindowStyle" TargetType="Window">
+        <Setter Property="Background" Value="{StaticResource WindowBackgroundColor}"/>
+        <Setter Property="Foreground" Value="{StaticResource ForegroundColor}"/>
+        <Setter Property="FontFamily" Value="Segoe UI"/>
+    </Style>
+
+    <!-- Base Style for all Widget UserControls -->
+    <Style x:Key="WidgetHostStyle" TargetType="UserControl">
+        <Setter Property="Background" Value="{StaticResource WidgetBackgroundColor}"/>
+        <Setter Property="Margin" Value="10"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="UserControl">
+                    <Border Background="{TemplateBinding Background}"
+                            BorderBrush="{StaticResource BorderColor}"
+                            BorderThickness="1"
+                            CornerRadius="12">
+                        <ContentPresenter/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!-- System Stats Widget Styles -->
+    <Style x:Key="StatLabelStyle" TargetType="TextBlock">
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="Foreground" Value="Gray"/>
+    </Style>
+
+    <Style x:Key="StatValueStyle" TargetType="TextBlock">
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="Foreground" Value="{StaticResource ForegroundColor}"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+    </Style>
+
+    <Style x:Key="StatProgressBarStyle" TargetType="ProgressBar">
+        <Setter Property="Height" Value="20"/>
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="Background" Value="{StaticResource ProgressBarBackgroundColor}"/>
+        <Setter Property="Foreground" Value="{StaticResource AccentColor}"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="ProgressBar">
+                    <Grid>
+                        <Border Name="PART_Track" CornerRadius="5" Background="{TemplateBinding Background}" />
+                        <Border Name="PART_Indicator" CornerRadius="5" Background="{TemplateBinding Foreground}" 
+                                HorizontalAlignment="Left" />
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+</ResourceDictionary>

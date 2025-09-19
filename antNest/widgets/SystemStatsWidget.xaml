@@ -1,0 +1,40 @@
+﻿<UserControl x:Class="antNest.widgets.SystemStatsWidget"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="200" d:DesignWidth="600"
+             Style="{StaticResource WidgetHostStyle}">
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- CPU Usage -->
+        <TextBlock Grid.Row="0" Text="CPU Usage" Style="{StaticResource StatLabelStyle}"/>
+        <Grid Grid.Row="1">
+            <ProgressBar x:Name="CpuProgressBar" Value="35" Style="{StaticResource StatProgressBarStyle}"/>
+            <TextBlock x:Name="CpuValueTextBlock" Text="35%" Style="{StaticResource StatValueStyle}"/>
+        </Grid>
+
+        <!-- RAM Usage -->
+        <TextBlock Grid.Row="2" Text="RAM Usage" Margin="0,10,0,0" Style="{StaticResource StatLabelStyle}"/>
+        <Grid Grid.Row="3">
+            <ProgressBar x:Name="RamProgressBar" Value="60" Style="{StaticResource StatProgressBarStyle}"/>
+            <TextBlock x:Name="RamValueTextBlock" Text="60%" Style="{StaticResource StatValueStyle}"/>
+        </Grid>
+
+        <!-- System Temp -->
+        <TextBlock Grid.Row="4" Text="System Temp (Placeholder)" Margin="0,10,0,0" Style="{StaticResource StatLabelStyle}"/>
+        <Grid Grid.Row="5">
+            <ProgressBar x:Name="TempProgressBar" Value="55" Style="{StaticResource StatProgressBarStyle}"/>
+            <TextBlock x:Name="TempValueTextBlock" Text="55°C" Style="{StaticResource StatValueStyle}"/>
+        </Grid>
+    </Grid>
+</UserControl>

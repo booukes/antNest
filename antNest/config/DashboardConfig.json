@@ -1,0 +1,25 @@
+{
+  "Widgets": [
+    {
+      "Type": "ClockWidget",
+      "GridRow": 0,
+      "GridColumn": 0,
+      "Settings": {}
+    },
+    {
+      "Type": "WeatherWidget",
+      "GridRow": 0,
+      "GridColumn": 1,
+      "Settings": {
+        "City": "Warsaw"
+      }
+    },
+    {
+      "Type": "SystemStatsWidget",
+      "GridRow": 1,
+      "GridColumn": 0,
+      "ColumnSpan": 2,
+      "Settings": {}
+    }
+  ]
+}
